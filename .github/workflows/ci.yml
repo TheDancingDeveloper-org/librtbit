@@ -28,7 +28,11 @@ jobs:
           prefix-key: v1-librtbit
 
       - name: Configure git for private deps
-        run: git config --global --replace-all url."https://x-access-token:${{ secrets.GHCR_TOKEN }}@github.com/".insteadOf "https://github.com/"
+        env:
+          GHCR_TOKEN: ${{ secrets.GHCR_TOKEN }}
+        run: |
+          git config --global --replace-all url."https://x-access-token:${GHCR_TOKEN}@github.com/".insteadOf "https://github.com/"
+          git config --global --replace-all url."http://git:${GHCR_TOKEN}@100.92.54.45:3002/".insteadOf "http://100.92.54.45:3002/"
 
       - name: Format check
         run: cargo fmt --all -- --check

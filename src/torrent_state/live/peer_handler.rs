@@ -813,7 +813,7 @@ impl PeerHandler {
         ) {
             Some(i) => i,
             None => {
-                anyhow::bail!("peer sent us an invalid piece {:?}", &piece,);
+                anyhow::bail!("peer sent us an invalid piece {:?}", piece,);
             }
         };
 

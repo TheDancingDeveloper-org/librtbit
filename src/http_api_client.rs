@@ -69,7 +69,7 @@ impl HttpApiClient {
     }
 
     pub fn base_url(&self) -> &reqwest::Url {
-        self.base_url
+        &self.base_url
     }
 
     #[inline(never)]

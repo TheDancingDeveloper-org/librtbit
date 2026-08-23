@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 description = "Core BitTorrent client library for the rtbit torrent client"
 license = "MIT"
-repository = "http://100.92.54.45:3002/indexarr/librtbit"
+repository = "https://github.com/TheDancingDeveloper-org/librtbit"
 
 [features]
 default = ["default-tls", "http-api-client"]
@@ -36,18 +36,18 @@ _disable_disk_write_net_benchmark = []
 _disable_reconnect_test = []
 
 [dependencies]
-# Internal deps (git + tag)
-bencode = { git = "http://100.92.54.45:3002/indexarr/librtbit-bencode.git", tag = "v0.1.0", package = "librtbit-bencode" }
-tracker_comms = { git = "http://100.92.54.45:3002/indexarr/librtbit-tracker-comms.git", tag = "v0.1.0", package = "librtbit-tracker-comms" }
-buffers = { git = "http://100.92.54.45:3002/indexarr/librtbit-buffers.git", tag = "v0.1.0", package = "librtbit-buffers" }
-librtbit-core = { git = "http://100.92.54.45:3002/indexarr/librtbit-core.git", tag = "v0.1.0" }
-librtbit-lsd = { git = "http://100.92.54.45:3002/indexarr/librtbit-lsd.git", tag = "v0.1.0" }
-clone_to_owned = { git = "http://100.92.54.45:3002/indexarr/librtbit-clone-to-owned.git", tag = "v0.1.0", package = "librtbit-clone-to-owned" }
-peer_binary_protocol = { git = "http://100.92.54.45:3002/indexarr/librtbit-peer-protocol.git", tag = "v0.1.0", package = "librtbit-peer-protocol" }
-sha1w = { git = "http://100.92.54.45:3002/indexarr/librtbit-sha1-wrapper.git", tag = "v0.1.0", package = "librtbit-sha1-wrapper" }
-dht = { git = "http://100.92.54.45:3002/indexarr/librtbit-dht.git", tag = "v0.1.0", package = "librtbit-dht" }
-librtbit-upnp = { git = "http://100.92.54.45:3002/indexarr/librtbit-upnp.git", tag = "v0.1.0" }
-upnp-serve = { git = "http://100.92.54.45:3002/indexarr/librtbit-upnp-serve.git", tag = "v0.1.0", package = "librtbit-upnp-serve", optional = true }
+# Internal deps (git, GitHub, pinned v0.1.0)
+bencode = { git = "https://github.com/TheDancingDeveloper-org/librtbit-bencode.git", tag = "v0.1.0", package = "librtbit-bencode" }
+tracker_comms = { git = "https://github.com/TheDancingDeveloper-org/librtbit-tracker-comms.git", tag = "v0.1.0", package = "librtbit-tracker-comms" }
+buffers = { git = "https://github.com/TheDancingDeveloper-org/librtbit-buffers.git", tag = "v0.1.0", package = "librtbit-buffers" }
+librtbit-core = { git = "https://github.com/TheDancingDeveloper-org/librtbit-core.git", tag = "v0.1.0" }
+librtbit-lsd = { git = "https://github.com/TheDancingDeveloper-org/librtbit-lsd.git", tag = "v0.1.0" }
+clone_to_owned = { git = "https://github.com/TheDancingDeveloper-org/librtbit-clone-to-owned.git", tag = "v0.1.0", package = "librtbit-clone-to-owned" }
+peer_binary_protocol = { git = "https://github.com/TheDancingDeveloper-org/librtbit-peer-protocol.git", tag = "v0.1.0", package = "librtbit-peer-protocol" }
+sha1w = { git = "https://github.com/TheDancingDeveloper-org/librtbit-sha1-wrapper.git", tag = "v0.1.0", package = "librtbit-sha1-wrapper" }
+dht = { git = "https://github.com/TheDancingDeveloper-org/librtbit-dht.git", tag = "v0.1.0", package = "librtbit-dht" }
+librtbit-upnp = { git = "https://github.com/TheDancingDeveloper-org/librtbit-upnp.git", tag = "v0.1.0" }
+upnp-serve = { git = "https://github.com/TheDancingDeveloper-org/librtbit-upnp-serve.git", tag = "v0.1.0", package = "librtbit-upnp-serve", optional = true }
 
 # External deps
 sqlx = { version = "0.8", default-features = false, features = ["runtime-tokio", "macros", "postgres"], optional = true }

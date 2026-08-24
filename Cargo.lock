@@ -1222,6 +1222,9 @@ name = "hashbrown"
 version = "0.14.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e5274423e17b7c9fc20b6e7e208532f9b19825d82dfd615708b70edd83df41f1"
+dependencies = [
+ "ahash",
+]
 
 [[package]]
 name = "hashbrown"
@@ -1243,6 +1246,15 @@ dependencies = [
  "allocator-api2",
  "equivalent",
  "foldhash 0.2.0",
+]
+
+[[package]]
+name = "hashlink"
+version = "0.9.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6ba4ff7128dee98c7dc9794b6a411377e1404dba1c97deb8d1a55297bd25d8af"
+dependencies = [
+ "hashbrown 0.14.5",
 ]
 
 [[package]]
@@ -1886,7 +1898,7 @@ dependencies = [
 [[package]]
 name = "librtbit-bencode"
 version = "0.1.0"
-source = "git+https://github.com/AusAgentSmith-org/librtbit-bencode.git?tag=v0.1.0#86a794304eeb44f008650914700f70f59d0a5b7e"
+source = "git+https://github.com/TheDancingDeveloper-org/librtbit-bencode.git?tag=v0.1.0#6228562ffb33bc59200da7066bc53d825faf3c54"
 dependencies = [
  "anyhow",
  "arrayvec",
@@ -1902,7 +1914,7 @@ dependencies = [
 [[package]]
 name = "librtbit-buffers"
 version = "0.1.0"
-source = "git+https://github.com/AusAgentSmith-org/librtbit-buffers.git?tag=v0.1.0#3385f67c4dad792020603542eeb11853a5a60fc7"
+source = "git+https://github.com/TheDancingDeveloper-org/librtbit-buffers.git?tag=v0.1.0#0dd82358f70f8e5351724d4b13ab426a9d0b51e2"
 dependencies = [
  "bytes",
  "librtbit-clone-to-owned",
@@ -1913,7 +1925,7 @@ dependencies = [
 [[package]]
 name = "librtbit-clone-to-owned"
 version = "0.1.0"
-source = "git+https://github.com/AusAgentSmith-org/librtbit-clone-to-owned.git?tag=v0.1.0#205d2c1b13a18bd4c50856a0e2fece02e61716b4"
+source = "git+https://github.com/TheDancingDeveloper-org/librtbit-clone-to-owned.git?tag=v0.1.0#d2e93b1fd314f4877a29d68b3419cfb15aa1db7e"
 dependencies = [
  "bytes",
 ]
@@ -1921,7 +1933,7 @@ dependencies = [
 [[package]]
 name = "librtbit-core"
 version = "0.1.0"
-source = "git+https://github.com/AusAgentSmith-org/librtbit-core.git?tag=v0.1.0#1611b846d41302fcce365e3356d425f188269115"
+source = "git+https://github.com/TheDancingDeveloper-org/librtbit-core.git?tag=v0.1.0#06f979414f7273b2856393d8883298ef8ef77ae0"
 dependencies = [
  "anyhow",
  "bytes",
@@ -1950,7 +1962,7 @@ dependencies = [
 [[package]]
 name = "librtbit-dht"
 version = "0.1.0"
-source = "git+https://github.com/AusAgentSmith-org/librtbit-dht.git?tag=v0.1.0#f725050c5df0aff1dfa3d5b0ae43574b8df8c40f"
+source = "git+https://github.com/TheDancingDeveloper-org/librtbit-dht.git?tag=v0.1.0#f47c10054f415c7ba539b5769e65a197c9b7af68"
 dependencies = [
  "anyhow",
  "aws-lc-rs",
@@ -1982,7 +1994,7 @@ dependencies = [
 [[package]]
 name = "librtbit-lsd"
 version = "0.1.0"
-source = "git+https://github.com/AusAgentSmith-org/librtbit-lsd.git?tag=v0.1.0#50243e3ddd9d2dd618c6188ff02b01e8e228e05c"
+source = "git+https://github.com/TheDancingDeveloper-org/librtbit-lsd.git?tag=v0.1.0#9f429491094ab818cce3c29ceb8befeb0721f20e"
 dependencies = [
  "anyhow",
  "atoi",
@@ -2002,7 +2014,7 @@ dependencies = [
 [[package]]
 name = "librtbit-peer-protocol"
 version = "0.1.0"
-source = "git+https://github.com/AusAgentSmith-org/librtbit-peer-protocol.git?tag=v0.1.0#fed2f98c3e58e6ab9bf2fc5daf5123fe326b7ad0"
+source = "git+https://github.com/TheDancingDeveloper-org/librtbit-peer-protocol.git?tag=v0.1.0#c46dcdba8e4c3b1b28c72b8c7a75c216b69651ca"
 dependencies = [
  "anyhow",
  "bitvec",
@@ -2022,7 +2034,7 @@ dependencies = [
 [[package]]
 name = "librtbit-sha1-wrapper"
 version = "0.1.0"
-source = "git+https://github.com/AusAgentSmith-org/librtbit-sha1-wrapper.git?tag=v0.1.0#15403f2292d878d159c1b52747a52667845133db"
+source = "git+https://github.com/TheDancingDeveloper-org/librtbit-sha1-wrapper.git?tag=v0.1.0#5011332d151013a6515ae8983fc0853614c1d6e3"
 dependencies = [
  "assert_cfg",
  "aws-lc-rs",
@@ -2032,7 +2044,7 @@ dependencies = [
 [[package]]
 name = "librtbit-tracker-comms"
 version = "0.1.0"
-source = "git+https://github.com/AusAgentSmith-org/librtbit-tracker-comms.git?tag=v0.1.0#8b51a1c0dd097ac7113789e02a6a8a9e176d7200"
+source = "git+https://github.com/TheDancingDeveloper-org/librtbit-tracker-comms.git?tag=v0.1.0#736f484dcdb127afd2804ab87f32bacab44b1cef"
 dependencies = [
  "anyhow",
  "async-stream",
@@ -2060,7 +2072,7 @@ dependencies = [
 [[package]]
 name = "librtbit-upnp"
 version = "0.1.0"
-source = "git+https://github.com/AusAgentSmith-org/librtbit-upnp.git?tag=v0.1.0#2d4b42ec198c3cfeef30c11cf53e72a1d0fec10f"
+source = "git+https://github.com/TheDancingDeveloper-org/librtbit-upnp.git?tag=v0.1.0#774586da89460ce341ac428cf8e8c920ab6db44f"
 dependencies = [
  "anyhow",
  "bstr",
@@ -2081,7 +2093,7 @@ dependencies = [
 [[package]]
 name = "librtbit-upnp-serve"
 version = "0.1.0"
-source = "git+https://github.com/AusAgentSmith-org/librtbit-upnp-serve.git?tag=v0.1.0#f64ee88b8e4eb7288ade3eb814415cdcf528db98"
+source = "git+https://github.com/TheDancingDeveloper-org/librtbit-upnp-serve.git?tag=v0.1.0#cb627e6f4971ac644ed69f448117ecd50efb1a48"
 dependencies = [
  "anyhow",
  "axum",
@@ -2110,9 +2122,9 @@ dependencies = [
 
 [[package]]
 name = "libsqlite3-sys"
-version = "0.32.0"
+version = "0.30.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fbb8270bb4060bd76c6e96f20c52d80620f1d82a3470885694e41e0f81ef6fe7"
+checksum = "2e99fb7a497b1e3339bc746195567ed8d3e24945ecd636e3619d20b9de9e9149"
 dependencies = [
  "cc",
  "pkg-config",
@@ -3069,14 +3081,14 @@ dependencies = [
 
 [[package]]
 name = "rusqlite"
-version = "0.34.0"
+version = "0.32.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "37e34486da88d8e051c7c0e23c3f15fd806ea8546260aa2fec247e97242ec143"
+checksum = "7753b721174eb8ff87a9a0e799e2d7bc3749323e773db92e0984debb00019d6e"
 dependencies = [
  "bitflags 2.11.0",
  "fallible-iterator",
  "fallible-streaming-iterator",
- "hashlink",
+ "hashlink 0.9.1",
  "libsqlite3-sys",
  "smallvec",
 ]
@@ -3512,7 +3524,7 @@ dependencies = [
  "futures-io",
  "futures-util",
  "hashbrown 0.15.5",
- "hashlink",
+ "hashlink 0.10.0",
  "indexmap 2.13.1",
  "log",
  "memchr",

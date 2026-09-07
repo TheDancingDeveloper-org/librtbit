@@ -12,7 +12,7 @@ concurrency:
 
 jobs:
   check:
-    runs-on: [self-hosted, node-b]
+    runs-on: [self-hosted]
     name: Build & Test
     env:
       CARGO_NET_GIT_FETCH_WITH_CLI: "true"
